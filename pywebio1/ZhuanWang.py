@@ -151,7 +151,11 @@ def ZhuanWangBaoBiao():
                              lambda: go_app('index', new_window=False)])
 
     # 需要输入信息的表格
+<<<<<<< HEAD
     put_text('本地专网').style('font-size:20px;font-weight:700;margin:10px')
+=======
+    put_text('本地专网').style('font-size:20px;font-weight:700;margin:15px')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     with use_scope('scope1', clear=True):
         put_table(
             [['','名称', '类型', '规格', '数量','单位', '税率', '折扣率', '一次性服务费（元）'],
@@ -431,7 +435,11 @@ def ZhuanWangBaoBiao():
                       put_text(" %s " % (discountMonthFee8)), put_text(" %s " % (discountYearFee8)),
                       put_text(" %s " % (oneTimeFee8)), put_text(" %s " % (oneTimeFeeSum8)), sum8],
                      ['项目总计','-','-','-','-','-','-','-','-','-','-',YearSum,'-',OneTimeSum,TotalSum]
+<<<<<<< HEAD
                      ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1500px;margin:10px')
+=======
+                     ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1500px')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
 
             # 点击下载表格
             with use_scope('scope3',clear=True):
@@ -442,15 +450,25 @@ def ZhuanWangBaoBiao():
                 discountMonthFee = ['',discountMonthFee1,discountMonthFee2,discountMonthFee3,discountMonthFee4,'',discountMonthFee6,discountMonthFee10,discountMonthFee8]
                 discountYearFee = ['',discountYearFee1,discountYearFee2,discountYearFee3,discountYearFee4,'',discountYearFee6,discountYearFee10,discountYearFee8]
                 oneTimeFee = ['',oneTimeFee1,oneTimeFee2,oneTimeFee3,oneTimeFee4,oneTimeFee5,oneTimeFee6,oneTimeFee10,oneTimeFee8]
+<<<<<<< HEAD
                 oneTimeFee = ['',oneTimeFee1,oneTimeFee2,oneTimeFee3,oneTimeFee4,oneTimeFee5,oneTimeFee6,oneTimeFee10,oneTimeFee8]
                 oneTimeFeeSum = ['',oneTimeFeeSum1,oneTimeFeeSum2,oneTimeFeeSum3,oneTimeFeeSum4,oneTimeFeeSum5,oneTimeFeeSum6,oneTimeFeeSum10,oneTimeFeeSum8]
                 sum = ['',sum1,sum2,sum3,sum4,sum5,sum6,sum10,sum8]
                 put_button('报表下载', onclick=lambda: ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum)).style('margin:30px')
+=======
+                oneTimeFeeSum = ['',oneTimeFeeSum1,oneTimeFeeSum2,oneTimeFeeSum3,oneTimeFeeSum4,oneTimeFeeSum5,oneTimeFeeSum6,oneTimeFeeSum10,oneTimeFeeSum8]
+                sum = ['',sum1,sum2,sum3,sum4,sum5,sum6,sum10,sum8]
+                put_button('报表下载', onclick=lambda: ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum))
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
 
 
 # 将更新后的信息填入表中，以供下载
 def ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum):
+<<<<<<< HEAD
     wb = openpyxl.load_workbook('./pywebio1/表格下载/本地专网.xlsx')
+=======
+    wb = openpyxl.load_workbook('./表格下载/本地专网.xlsx')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     ws = wb.active
     # 人联卡相关
     ws.cell(row=6, column=5).value = "%s" % (pin.select1)
@@ -501,7 +519,10 @@ def ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,disco
     ws.cell(row=9, column=15).value = "%s" % (oneTimeFeeSum[4])
     ws.cell(row=9, column=16).value = "%s" % (sum[4])
     # 定制号卡相关
+<<<<<<< HEAD
     ws.cell(row=10, column=3).value = "%s" % (pin.select5)
+=======
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     ws.cell(row=10, column=6).value = "%s" % (num[5])
     ws.cell(row=10, column=10).value = "%s%s" % (discount[5], "%")
     ws.cell(row=10, column=14).value = "%s" % (oneTimeFee[5])
@@ -544,7 +565,11 @@ def ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,disco
     ws.cell(row=17, column=15).value = "%s" % (OneTimeSum)
     ws.cell(row=17, column=16).value = "%s" % (TotalSum)
 
+<<<<<<< HEAD
     update_FileName = './pywebio1/更新后的表/update-本地专网.xlsx'
+=======
+    update_FileName = '更新后的表/update-本地专网.xlsx'
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     wb.save(update_FileName)
     # 删除不需要的行，并补齐序号
     lims_file1 = lims_file(update_FileName)

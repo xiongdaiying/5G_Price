@@ -52,7 +52,11 @@ def VPDNPrice():
         TableWidth = 'width:790px'
         HalfTableWidth = 'width:395px'
         put_text('二、业务隔离价格参考表').style('font-size:20px;font-weight:700')
+<<<<<<< HEAD
         workbook = load_workbook(filename='./pywebio1/价格参考表/UPF价格参考表.xlsx')
+=======
+        workbook = load_workbook(filename='./pywebio1/价格参考表/5G_VPDN价格参考表.xlsx')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
         YeWuGeLi = workbook["业务隔离"]
         put_table(
             [
@@ -151,7 +155,11 @@ def VPDNBaoBiao():
 
     # 需要输入信息的表格
     with use_scope('scope1', clear=True):
+<<<<<<< HEAD
         put_text('5G VPDN').style('font-size:20px;font-weight:700;margin:10px')
+=======
+        put_text('5G VPDN').style('font-size:20px;font-weight:700;margin:15px')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
         put_table(
             [['', '名称', '类型', '规格', '数量', '单位', '税率', '折扣率', '一次性服务费（元）'],
              [span('定制流量', row=5)],
@@ -191,7 +199,11 @@ def VPDNBaoBiao():
              ['功能费','套餐功能费', '-',put_input('Num12', type=NUMBER),
               '号', '6%',put_row([put_input('Discount12', type=NUMBER), put_text('%').style('margin-top: 5px')], size='80% 20%'),
               put_input('Fee12', type=NUMBER)]
+<<<<<<< HEAD
              ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1000px;margin:10px')
+=======
+             ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1000px;margin:15px')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
 
         # 更新表格
         while True:
@@ -435,7 +447,11 @@ def VPDNBaoBiao():
                       put_text(" %s " % (oneTimeFee12)), put_text(" %s " % (oneTimeFeeSum12)), sum12],
                      ['项目总计', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', YearSum, '-', OneTimeSum, TotalSum]
                      ]).style(
+<<<<<<< HEAD
                     'text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1500px;margin:10px')
+=======
+                    'text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1500px')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
 
             # 点击下载表格
             with use_scope('scope3', clear=True):
@@ -463,7 +479,11 @@ def VPDNBaoBiao():
 def VPDNFileDownload(num, charge, discount, discountFee, discountMonthFee, discountYearFee, oneTimeFee,
                     oneTimeFeeSum, sum, YearSum, OneTimeSum, TotalSum):
     # 打开空白表格
+<<<<<<< HEAD
     wb = openpyxl.load_workbook('./pywebio1/表格下载/5G_VPDN.xlsx')
+=======
+    wb = openpyxl.load_workbook('./表格下载/5G_VPDN.xlsx')
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     ws = wb.active
     # 人联卡相关
     ws.cell(row=6, column=5).value = "%s" % (pin.select1)
@@ -504,7 +524,10 @@ def VPDNFileDownload(num, charge, discount, discountFee, discountMonthFee, disco
     ws.cell(row=8, column=15).value = "%s" % (oneTimeFeeSum[3])
     ws.cell(row=8, column=16).value = "%s" % (sum[3])
     # 定制号卡相关
+<<<<<<< HEAD
     ws.cell(row=9, column=3).value = "%s" % (pin.select5)
+=======
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     ws.cell(row=9, column=6).value = "%s" % (num[4])
     ws.cell(row=9, column=10).value = "%s%s" % (discount[4], "%")
     ws.cell(row=9, column=14).value = "%s" % (oneTimeFee[4])
@@ -557,7 +580,11 @@ def VPDNFileDownload(num, charge, discount, discountFee, discountMonthFee, disco
     ws.cell(row=17, column=15).value = "%s" % (OneTimeSum)
     ws.cell(row=17, column=16).value = "%s" % (TotalSum)
 
+<<<<<<< HEAD
     update_FileName = './pywebio1/更新后的表/update-5G_VPDN.xlsx'
+=======
+    update_FileName = './更新后的表/update-5G_VPDN.xlsx'
+>>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     wb.save(update_FileName)
     # 删除不需要的行，并补齐序号
     lims_file1 = lims_file(update_FileName)
