@@ -14,8 +14,10 @@ from pywebio1.UPF import lims_file
 # 显示价格详情
 def VPDNPrice():
     with use_scope('scope_top', clear=False):
-        put_buttons(['价格详情', '价格计算器','返回主页'],
-                    onclick=[lambda: go_app('VPDNPrice', new_window=False),lambda: go_app('VPDNBaoBiao', new_window=False),lambda: go_app('index', new_window=False)])
+        put_buttons(['价格详情', '价格计算器', '返回主页'],
+                    onclick=[lambda: go_app('VPDNPrice', new_window=False),
+                             lambda: go_app('VPDNBaoBiao', new_window=False),
+                             lambda: go_app('index', new_window=False)])
     with use_scope('scope1', clear=True):
         TableWidth = 'width:1300px'
         put_text('一、定制流量价格参考表').style('font-size:20px;font-weight:700')
@@ -25,26 +27,30 @@ def VPDNPrice():
         put_table(
             [
                 [span(put_text('定制流量').style(TableWidth), col=12)],
-                [span(put_text(DingZhiLiuLiang1['A1'].value), col=2),span(put_text(DingZhiLiuLiang1['C1'].value), col=6),
-                 span(put_text(DingZhiLiuLiang1['I1'].value), col=2),span(put_text(DingZhiLiuLiang1['K1'].value), col=2)],
-                [put_text(DingZhiLiuLiang1['A2'].value),put_text(DingZhiLiuLiang1['B2'].value),
-                 span(put_text(DingZhiLiuLiang1['C2'].value),col=3),span(put_text(DingZhiLiuLiang1['F2'].value),col=3),
-                 put_text(DingZhiLiuLiang1['I2'].value),put_text(DingZhiLiuLiang1['J2'].value),put_text(DingZhiLiuLiang1['K2'].value),
+                [span(put_text(DingZhiLiuLiang1['A1'].value), col=2),
+                 span(put_text(DingZhiLiuLiang1['C1'].value), col=6),
+                 span(put_text(DingZhiLiuLiang1['I1'].value), col=2),
+                 span(put_text(DingZhiLiuLiang1['K1'].value), col=2)],
+                [put_text(DingZhiLiuLiang1['A2'].value), put_text(DingZhiLiuLiang1['B2'].value),
+                 span(put_text(DingZhiLiuLiang1['C2'].value), col=3),
+                 span(put_text(DingZhiLiuLiang1['F2'].value), col=3),
+                 put_text(DingZhiLiuLiang1['I2'].value), put_text(DingZhiLiuLiang1['J2'].value),
+                 put_text(DingZhiLiuLiang1['K2'].value),
                  put_text(DingZhiLiuLiang1['L2'].value)],
-                [x for x in info(DingZhiLiuLiang1,3)],
-                [x for x in info(DingZhiLiuLiang1,4)],
-                [x for x in info(DingZhiLiuLiang1,5)],
-                [x for x in info(DingZhiLiuLiang1,6)],
-                [x for x in info(DingZhiLiuLiang1,7)],
-                [x for x in info(DingZhiLiuLiang1,8)],
-                [x for x in info(DingZhiLiuLiang1,9)],
-                [x for x in info(DingZhiLiuLiang1,10)],
-                [x for x in info(DingZhiLiuLiang1,11)],
-                [x for x in info(DingZhiLiuLiang1,12)],
-                [x for x in info(DingZhiLiuLiang1,13)],
-                [x for x in info(DingZhiLiuLiang1,14)],
-                [x for x in info(DingZhiLiuLiang1,15)],
-                [x for x in info(DingZhiLiuLiang1,16)]
+                [x for x in info(DingZhiLiuLiang1, 3)],
+                [x for x in info(DingZhiLiuLiang1, 4)],
+                [x for x in info(DingZhiLiuLiang1, 5)],
+                [x for x in info(DingZhiLiuLiang1, 6)],
+                [x for x in info(DingZhiLiuLiang1, 7)],
+                [x for x in info(DingZhiLiuLiang1, 8)],
+                [x for x in info(DingZhiLiuLiang1, 9)],
+                [x for x in info(DingZhiLiuLiang1, 10)],
+                [x for x in info(DingZhiLiuLiang1, 11)],
+                [x for x in info(DingZhiLiuLiang1, 12)],
+                [x for x in info(DingZhiLiuLiang1, 13)],
+                [x for x in info(DingZhiLiuLiang1, 14)],
+                [x for x in info(DingZhiLiuLiang1, 15)],
+                [x for x in info(DingZhiLiuLiang1, 16)]
             ]
         ).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word')
 
@@ -70,26 +76,27 @@ def VPDNPrice():
         put_table(
             [
                 [span(put_text(RuWangZhuanXian['A1'].value).style(TableWidth), col=8)],
-                [span(put_text(RuWangZhuanXian['A2'].value), col=4),span(put_text(RuWangZhuanXian['E2'].value), col=2),span(put_text(RuWangZhuanXian['G2'].value), col=2)],
-                [x for x in info(RuWangZhuanXian, 3)],[x for x in info(RuWangZhuanXian, 4)],
-                [x for x in info(RuWangZhuanXian, 5)],[x for x in info(RuWangZhuanXian, 6)],
-                [x for x in info(RuWangZhuanXian, 7)],[x for x in info(RuWangZhuanXian, 8)],
-                [x for x in info(RuWangZhuanXian, 9)],[x for x in info(RuWangZhuanXian, 10)],
-                [x for x in info(RuWangZhuanXian, 11)],[x for x in info(RuWangZhuanXian, 12)],
+                [span(put_text(RuWangZhuanXian['A2'].value), col=4), span(put_text(RuWangZhuanXian['E2'].value), col=2),
+                 span(put_text(RuWangZhuanXian['G2'].value), col=2)],
+                [x for x in info(RuWangZhuanXian, 3)], [x for x in info(RuWangZhuanXian, 4)],
+                [x for x in info(RuWangZhuanXian, 5)], [x for x in info(RuWangZhuanXian, 6)],
+                [x for x in info(RuWangZhuanXian, 7)], [x for x in info(RuWangZhuanXian, 8)],
+                [x for x in info(RuWangZhuanXian, 9)], [x for x in info(RuWangZhuanXian, 10)],
+                [x for x in info(RuWangZhuanXian, 11)], [x for x in info(RuWangZhuanXian, 12)],
                 [x for x in info(RuWangZhuanXian, 13)]
             ]
         ).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word')
 
-def info(table,row):
+
+def info(table, row):
     # 返回一个列表
     infoList = []
     for x in table[row]:
-        if(pd.isnull(x.value) == False):
+        if (pd.isnull(x.value) == False):
             infoList.append(x.value)
         else:
             infoList.append('')
     return infoList
-
 
 
 # 显示报表信息
@@ -109,7 +116,6 @@ def VPDNBaoBiao():
     WangYuan = pd.read_excel('./pywebio1/数据表/网元定制.xlsx')
     IPRAN = pd.read_excel('./pywebio1/数据表/IPRAN.xlsx')
 
-
     # 数据获取
     # b左侧类型 p右侧具体费用
     b1 = np.array(RenLian['月流量/通话'])
@@ -120,7 +126,7 @@ def VPDNBaoBiao():
     b72 = np.array(RuWangZhuanXian['5G定制网STN带宽'])
     b81 = np.array(WangYuan['方案说明'])
     b82 = np.array(WangYuan['协议期'])
-    b10 = np.array(IPRAN.iloc[3:,0])
+    b10 = np.array(IPRAN.iloc[3:, 0])
 
     b1 = list(b1)
     b2 = list(b2)
@@ -188,10 +194,12 @@ def VPDNBaoBiao():
               put_row([put_input('Discount11', type=NUMBER), put_text('%').style('margin-top: 5px')], size='80% 20%'),
               put_input('Fee11', type=NUMBER)],
              [span('网元定制', row=2)],
-             ['功能费','套餐功能费', '-',put_input('Num12', type=NUMBER),
-              '号', '6%',put_row([put_input('Discount12', type=NUMBER), put_text('%').style('margin-top: 5px')], size='80% 20%'),
+             ['功能费', '套餐功能费', '-', put_input('Num12', type=NUMBER),
+              '号', '6%',
+              put_row([put_input('Discount12', type=NUMBER), put_text('%').style('margin-top: 5px')], size='80% 20%'),
               put_input('Fee12', type=NUMBER)]
-             ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1000px;margin:10px')
+             ]).style(
+            'text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1000px;margin:10px')
 
         # 更新表格
         while True:
@@ -347,7 +355,7 @@ def VPDNBaoBiao():
                 oneTimeFeeSum11 = a11[7]
                 # 报价合计
                 sum11 = a11[8]
-                
+
                 # 功能费相关
                 a12 = cal_GonNeng(IPRAN)
                 # 数量
@@ -368,14 +376,13 @@ def VPDNBaoBiao():
                 oneTimeFeeSum12 = a12[7]
                 # 报价合计
                 sum12 = a12[8]
-                
 
                 # 计算总价
-                YearSumList = [discountYearFee1, discountYearFee2, discountYearFee3, discountYearFee6,discountYearFee7,
-                                discountYearFee11,discountYearFee12]
+                YearSumList = [discountYearFee1, discountYearFee2, discountYearFee3, discountYearFee6, discountYearFee7,
+                               discountYearFee11, discountYearFee12]
                 OneTimeSumList = [oneTimeFeeSum1, oneTimeFeeSum2, oneTimeFeeSum3, oneTimeFeeSum5,
-                                  oneTimeFeeSum6, oneTimeFeeSum7 , oneTimeFeeSum11,oneTimeFeeSum12]
-                TotalSumList = [sum1, sum2, sum3, sum5, sum6,sum7, sum11,sum12]
+                                  oneTimeFeeSum6, oneTimeFeeSum7, oneTimeFeeSum11, oneTimeFeeSum12]
+                TotalSumList = [sum1, sum2, sum3, sum5, sum6, sum7, sum11, sum12]
                 YearSum = totalSum(YearSumList)
                 OneTimeSum = totalSum(OneTimeSumList)
                 TotalSum = totalSum(TotalSumList)
@@ -439,9 +446,10 @@ def VPDNBaoBiao():
 
             # 点击下载表格
             with use_scope('scope3', clear=True):
-                num = ['', num1, num2, num3, num5, num6, num7,num11,num12]
+                num = ['', num1, num2, num3, num5, num6, num7, num11, num12]
                 charge = ['', charge1, charge2, charge3, '', charge6, charge7, charge11, charge12]
-                discount = ['', discount1, discount2, discount3, discount5, discount6, discount7, discount11, discount12]
+                discount = ['', discount1, discount2, discount3, discount5, discount6, discount7, discount11,
+                            discount12]
                 discountFee = ['', discountFee1, discountFee2, discountFee3, '', discountFee6,
                                discountFee7, discountFee11, discountFee12]
                 discountMonthFee = ['', discountMonthFee1, discountMonthFee2, discountMonthFee3, '',
@@ -455,13 +463,13 @@ def VPDNBaoBiao():
                 sum = ['', sum1, sum2, sum3, sum5, sum6, sum7, sum11, sum12]
                 put_button('报表下载',
                            onclick=lambda: VPDNFileDownload(num, charge, discount, discountFee, discountMonthFee,
-                                                                 discountYearFee, oneTimeFee, oneTimeFeeSum, sum,
-                                                                 YearSum, OneTimeSum, TotalSum))
+                                                            discountYearFee, oneTimeFee, oneTimeFeeSum, sum,
+                                                            YearSum, OneTimeSum, TotalSum)).style('margin:10px')
 
 
 # 将更新后的信息填入表中，以供下载
 def VPDNFileDownload(num, charge, discount, discountFee, discountMonthFee, discountYearFee, oneTimeFee,
-                    oneTimeFeeSum, sum, YearSum, OneTimeSum, TotalSum):
+                     oneTimeFeeSum, sum, YearSum, OneTimeSum, TotalSum):
     # 打开空白表格
     wb = openpyxl.load_workbook('./pywebio1/表格下载/5G_VPDN.xlsx')
     ws = wb.active

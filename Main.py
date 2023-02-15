@@ -16,4 +16,4 @@ def index():
             put_button('5G VPDN', onclick=lambda: go_app('VPDNBaoBiao', new_window=False))
 
 
-start_server([index,upfPrice,upfBaoBiao,ZhuanWangBaoBiao,ZhuanWangPrice,VPDNBaoBiao,VPDNPrice], port=8899, debug=True)
+start_server([index,upfPrice,upfBaoBiao,ZhuanWangBaoBiao,ZhuanWangPrice,VPDNBaoBiao,VPDNPrice], port=8898, debug=True)

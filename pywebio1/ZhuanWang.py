@@ -445,7 +445,7 @@ def ZhuanWangBaoBiao():
                 oneTimeFee = ['',oneTimeFee1,oneTimeFee2,oneTimeFee3,oneTimeFee4,oneTimeFee5,oneTimeFee6,oneTimeFee10,oneTimeFee8]
                 oneTimeFeeSum = ['',oneTimeFeeSum1,oneTimeFeeSum2,oneTimeFeeSum3,oneTimeFeeSum4,oneTimeFeeSum5,oneTimeFeeSum6,oneTimeFeeSum10,oneTimeFeeSum8]
                 sum = ['',sum1,sum2,sum3,sum4,sum5,sum6,sum10,sum8]
-                put_button('报表下载', onclick=lambda: ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum)).style('margin:30px')
+                put_button('报表下载', onclick=lambda: ZhuanWangFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum)).style('margin:10px')
 
 
 # 将更新后的信息填入表中，以供下载

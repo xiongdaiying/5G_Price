@@ -428,7 +428,7 @@ def upfBaoBiao():
                 oneTimeFee = ['',oneTimeFee1,oneTimeFee2,oneTimeFee3,oneTimeFee4,oneTimeFee5,oneTimeFee6,oneTimeFee7,oneTimeFee81]
                 oneTimeFeeSum = ['',oneTimeFeeSum1,oneTimeFeeSum2,oneTimeFeeSum3,oneTimeFeeSum4,oneTimeFeeSum5,oneTimeFeeSum6,oneTimeFeeSum7,oneTimeFeeSum81]
                 sum = ['',sum1,sum2,sum3,sum4,sum5,sum6,sum7,sum81]
-                put_button('报表下载', onclick=lambda: UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum))
+                put_button('报表下载', onclick=lambda: UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum)).style('margin:10px')
 
 
 # 将更新后的信息填入表中，以供下载
