@@ -1,9 +1,6 @@
 import openpyxl
 from openpyxl.reader.excel import load_workbook
-<<<<<<< HEAD
 from openpyxl.styles import Alignment
-=======
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
 from openpyxl.utils import *
 from pywebio.input import *
 from pywebio.output import *
@@ -139,11 +136,7 @@ def upfBaoBiao():
                     onclick=[lambda: go_app('upfPrice', new_window=False), lambda: go_app('upfBaoBiao', new_window=False),lambda: go_app('index', new_window=False)])
 
     # 需要输入信息的表格
-<<<<<<< HEAD
     put_text('独享UPF').style('font-size:20px;font-weight:700;margin:10px')
-=======
-    put_text('独享UPF').style('font-size:20px;font-weight:700;margin:15px')
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     with use_scope('scope1', clear=True):
         put_table(
             [['','名称', '类型', '规格', '数量','单位', '税率', '折扣率', '一次性服务费（元）'],
@@ -422,11 +415,7 @@ def upfBaoBiao():
                       put_text(" %s " % (discountMonthFee81)), put_text(" %s " % (discountYearFee81)),
                       put_text(" %s " % (oneTimeFee81)), put_text(" %s " % (oneTimeFeeSum81)), sum81],
                      ['项目总计','-','-','-','-','-','-','-','-','-','-',YearSum,'-',OneTimeSum,TotalSum]
-<<<<<<< HEAD
                      ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1500px;margin:10px')
-=======
-                     ]).style('text-align:center;text-align-last:center;table-layout:fixed;word-wrap:break-word;width:1500px')
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
 
             # 点击下载表格
             with use_scope('scope3',clear=True):
@@ -439,16 +428,12 @@ def upfBaoBiao():
                 oneTimeFee = ['',oneTimeFee1,oneTimeFee2,oneTimeFee3,oneTimeFee4,oneTimeFee5,oneTimeFee6,oneTimeFee7,oneTimeFee81]
                 oneTimeFeeSum = ['',oneTimeFeeSum1,oneTimeFeeSum2,oneTimeFeeSum3,oneTimeFeeSum4,oneTimeFeeSum5,oneTimeFeeSum6,oneTimeFeeSum7,oneTimeFeeSum81]
                 sum = ['',sum1,sum2,sum3,sum4,sum5,sum6,sum7,sum81]
-                put_button('报表下载', onclick=lambda: UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum))
+                put_button('报表下载', onclick=lambda: UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum)).style('margin:10px')
 
 
 # 将更新后的信息填入表中，以供下载
 def UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYearFee,oneTimeFee,oneTimeFeeSum,sum,YearSum,OneTimeSum,TotalSum):
-<<<<<<< HEAD
     wb = openpyxl.load_workbook('./pywebio1/表格下载/UPF.xlsx')
-=======
-    wb = openpyxl.load_workbook('./表格下载/UPF.xlsx')
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     ws = wb.active
     # 人联卡相关
     ws.cell(row=6, column=5).value = "%s" % (pin.select1)
@@ -499,10 +484,7 @@ def UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYea
     ws.cell(row=9, column=15).value = "%s" % (oneTimeFeeSum[4])
     ws.cell(row=9, column=16).value = "%s" % (sum[4])
     # 定制号卡相关
-<<<<<<< HEAD
     ws.cell(row=10, column=3).value = "%s" % (pin.select5)
-=======
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     ws.cell(row=10, column=6).value = "%s" % (num[5])
     ws.cell(row=10, column=10).value = "%s%s" % (discount[5], "%")
     ws.cell(row=10, column=14).value = "%s" % (oneTimeFee[5])
@@ -545,11 +527,7 @@ def UpfFileDownload(num,charge,discount,discountFee,discountMonthFee,discountYea
     ws.cell(row=16,column=13).value = "%s" % (YearSum)
     ws.cell(row=16, column=15).value = "%s" % (OneTimeSum)
     ws.cell(row=16, column=16).value = "%s" % (TotalSum)
-<<<<<<< HEAD
     update_FileName = './pywebio1/更新后的表/update-UPF.xlsx'
-=======
-    update_FileName = '更新后的表/update-UPF.xlsx'
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
     wb.save(update_FileName)
     # 删除不需要的行，并补齐序号
     lims_file1 = lims_file(update_FileName)
@@ -582,11 +560,7 @@ class lims_file():
     # 补齐序号
     def serial(self):
         serialNum = 1
-<<<<<<< HEAD
         for x in range(6,self.row):
-=======
-        for x in range(6,self.row-1):
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
             s = self.ws1.cell(x, 2).value
             if (s is None):
                 serialNum = 1
@@ -596,7 +570,6 @@ class lims_file():
         self.wb1.save(self.update_FileName)
     # 设置表格的行间距和列间距
     def xlsxFormat(self):
-<<<<<<< HEAD
         width1 = 10
         width2 = 15
         height = 30
@@ -606,15 +579,5 @@ class lims_file():
         for i in range(1, self.column + 1):
             self.ws1.column_dimensions[get_column_letter(i)].width = width1
         self.ws1.column_dimensions['B'].width = width2
-=======
-        width1 = 100
-        width2 = 200
-        height = 30
-        for i in range(5, self.row + 1):
-            self.ws1.row_dimensions[i].height = height
-        for i in range(1, self.column + 1):
-            self.ws1.column_dimensions[get_column_letter(i)].width = width1
-        self.wb1.column_dimensions['B'].width = width2
->>>>>>> 84a211dab1bfb8fcbb51eb21ca17bc257b881100
         self.wb1.save(self.update_FileName)
 # start_server([index,upfPrice,upfBaoBiao,ZhuanWangBaoBiao,ZhuanWangPrice,VPDNBaoBiao,VPDNPrice], port=8080, debug=True)
